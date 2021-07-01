@@ -17,5 +17,24 @@ const generateSessionId = (length) => {
 
     return result;
 };
+const isEmptyObject = (obj) => {
+    for (const prop in obj) {
+        if (obj.hasOwnProperty(prop)) {
+            return false;
+        }
+    }
+    return true;
+};
+const getMillisecondsUntilMidnight = () => {
+    const midnight = new Date();
+    midnight.setHours(24, 0, 0, 0);
+    return (midnight.getTime() - new Date().getTime());
+};
 
-module.exports = {isSet, isStringSet, generateSessionId};
+module.exports = {
+    isSet,
+    isStringSet,
+    generateSessionId,
+    isEmptyObject,
+    getMillisecondsUntilMidnight
+};
