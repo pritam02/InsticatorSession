@@ -22,23 +22,20 @@ Alternatively we can use nvm (node version manager to manage the versions of nod
 
 
 #### Build Steps
-* create the project directory
-```sh
-$ mkdir InsticatorSession
-```
-
-* go to the project directory
-
-
-```sh
-$ cd InsticatorSession
-```
+* browse to the directory where the project should be installed
 
 * clone the project
 
 ```sh
 $ git clone https://github.com/pritam02/InsticatorSession.git
 ```
+
+* go to the project directory
+
+```sh
+$ cd InsticatorSession
+```
+* make sure the correct version of node is selected before installing the dependencies 
 
 * install dependencies
 
@@ -89,6 +86,15 @@ which is used to track sessions for the user.
 
 For simplicity, the client side JavaScript SDK, the analytics pixel endpoint and the test pages
 are all hosted in the same server. The test pages are actually serving as an alternative for publisher pages.
+
+### Debugging
+
+For Debugging, we can build the development version of the client side SDK. To do the same,
+we should execute the following command while building the project.
+
+```sh
+$ npm run start-dev
+```
 
 ### Security Considerations
 
