@@ -52,6 +52,34 @@ describe("Test Analytics Endpoint For Session", () => {
                 done();
             });
         });
+        describe("Invalid Referrer Sent", () => {
+            it('Should return status 422', (done) => {
+                chai.request(app)
+                    .get('/insticator/session')
+                    .query({cmp: "samusung", rf: "https://facebook.com/ads<scrip"})
+                    .end((err, res) => {
+                        expect(err).to.be.null;
+                        expect(res).to.have.status(422);
+                        expect(res).to.not.have.cookie(constants.Cookie.SESSION_COOKIE_NAME);
+                        expect(res).to.not.have.header('content-type', 'image/gif');
+                    });
+                done();
+            });
+        });
+        describe("Invalid Campaign Sent", () => {
+            it('Should return status 422', (done) => {
+                chai.request(app)
+                    .get('/insticator/session')
+                    .query({cmp: "samusung<script", rf: "https://facebook.com/ads"})
+                    .end((err, res) => {
+                        expect(err).to.be.null;
+                        expect(res).to.have.status(422);
+                        expect(res).to.not.have.cookie(constants.Cookie.SESSION_COOKIE_NAME);
+                        expect(res).to.not.have.header('content-type', 'image/gif');
+                    });
+                done();
+            });
+        });
         describe("Referrer And Campaign Sent", () => {
             it('Should return a gif response with Status 200 and Session Cookie Set', (done) => {
                 chai.request(app)
