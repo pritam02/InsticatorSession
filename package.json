@@ -7,7 +7,8 @@
     "build-dev": "webpack --mode development",
     "start-server": "node server/webserver/server.js",
     "start": "run-s build start-server",
-    "start-dev": "run-s build-dev start-server"
+    "start-dev": "run-s build-dev start-server",
+    "test": "mocha server/tests/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "babel-preset-latest": "^6.24.1",
     "chai": "^4.3.4",
     "chai-http": "^4.3.0",
+    "cookie": "^0.4.1",
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "mocha": "^9.0.2",
