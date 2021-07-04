@@ -7,7 +7,7 @@ const getSessionCookieValue = (req) => {
 };
 const getCookieExpiry = () => {
     return Math.min(constants.Cookie.MAX_COOKIE_EXPIRY, util.getMillisecondsUntilMidnight());
-}
+};
 
 module.exports = {
     getSessionCookieValue,
