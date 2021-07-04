@@ -8,7 +8,7 @@
     "start-server": "node server/webserver/server.js",
     "start": "run-s build start-server",
     "start-dev": "run-s build-dev start-server",
-    "test": "mocha server/tests/**/*.js"
+    "server-test": "mocha server/tests/**/*.js"
   },
   "repository": {
     "type": "git",
