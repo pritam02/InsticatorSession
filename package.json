@@ -5,7 +5,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "build-dev": "webpack --mode development",
-    "start-server": "node server/server.js",
+    "start-server": "node server/webserver/server.js",
     "start": "run-s build start-server",
     "start-dev": "run-s build-dev start-server"
   },

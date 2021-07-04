@@ -22,9 +22,13 @@ const fetchStart = (req, res) => {
     return start;
 };
 const fetchTagContent = (req, res) => {
-    res.type("text/javascript");
-    res.status(200);
-    res.send(fetchStart(req, res) + fetchJsTagBundle() + fetchEnd())
+    try {
+        res.type("text/javascript");
+        res.status(200);
+        res.send(fetchStart(req, res) + fetchJsTagBundle() + fetchEnd());
+    } catch (e) {
+        res.status(500).end();
+    }
 };
 
 

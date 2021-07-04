@@ -18,7 +18,7 @@ const handleSession = (req, res) => {
         });
         res.send(trackImg);
     } catch (e) {
-        res.status(500).send();
+        res.status(500).end();
     }
 };
 module.exports = {handleSession};
