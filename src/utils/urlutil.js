@@ -13,6 +13,7 @@ function getQueryParamsFromUrl(url) {
         return {};
     }
     let k, a, pm = {}, i, p;
+    url = url.split("#")[0];
     k = url.indexOf("?");
     if (k === -1) {
         return pm;
