@@ -1,9 +1,9 @@
 # InsticatorSession
 
 This application is used to host a server built on top of express JS which serves the following purposes :-
-* serve a client side JavaScript SDK to track sessions.
-* an Analytics endpoint to store session data in the form of a cookie.
-* Test Pages to test the client side JavaScript SDK and the session endpoint.
+* Serve a client side JavaScript SDK to track sessions.
+* Serve an Analytics endpoint to store session data in the form of a cookie.
+* Test Pages to test the client side JavaScript SDK and the session analytics endpoint.
 
 
 ### Steps to build the project
@@ -12,7 +12,7 @@ Prerequisites - The project assumes that git, node js and npm are installed in t
 
 The version of node js should be above 12.0.0.
 
-Alternatively we can use nvm (node version manager to manage the versions of node running in the system)
+Alternatively we can use nvm (node version manager) to manage the versions of node running in the system
 
 [node and npm installation guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
@@ -98,5 +98,5 @@ $ npm run start-dev
 
 ### Security Considerations
 
-We should Sanitize all the incoming inputs for the analytics pixel since it can be prone to Cross-site Scripting(XSS) attack
+We should Sanitize all the incoming inputs for the analytics pixel since it can be prone to Cross-site Scripting(XSS) attack.
 
