@@ -69,7 +69,7 @@ They are as follows :-
 i) http://localhost:3000/test-page/test-session.html?campaign=cars
 
 This particular test page has the default referrer policy. The Referrer url is forwarded to the server 
-by the browser in the request headers which be used to track sessions. 
+by the browser in the request headers which can be used to track sessions. 
 
 This page loads the client side JavaScript SDK (http://localhost:3000/instag.js). The SDK does not fire the analytics pixel
 since the Referrer is available from the request headers.
