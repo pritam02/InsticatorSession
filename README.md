@@ -12,7 +12,7 @@ Prerequisites - The project assumes that git, node js and npm are installed in t
 
 The version of node js should be above 12.0.0.
 
-Alternatively we can use nvm (node version manager) to manage the versions of node running in the system
+Alternatively we can use nvm (node version manager) to manage the versions of node running in the system.
 
 [node and npm installation guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
@@ -86,6 +86,9 @@ which is used to track sessions for the user.
 
 For simplicity, the client side JavaScript SDK, the analytics pixel endpoint and the test pages
 are all hosted in the same server. The test pages are actually serving as an alternative for publisher pages.
+
+The unit test cases are integrated within the build pipleline. In case the test suite fails,
+the build will failover and the server will not get started.
 
 ### Debugging
 
